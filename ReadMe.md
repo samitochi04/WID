@@ -1,4 +1,4 @@
-#Description de l'application WID
+# Description de l'application WID
 
 ## **WID** : WID est une application moderne et intuitive conçue pour simplifier la gestion de tâches et favoriser une collaboration fluide entre les équipes. Inspirée des meilleures pratiques, comme celles de Jira, WID offre une plateforme minimaliste et performante axée uniquement sur la gestion des tâches et la collaboration en équipe.  
 
