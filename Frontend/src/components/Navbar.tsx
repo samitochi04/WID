@@ -1,0 +1,33 @@
+import React from 'react';
+import { Moon, Sun, Workflow } from 'lucide-react';
+import { useStore } from '../store/useStore';
+
+export const Navbar: React.FC = () => {
+  const { theme, toggleTheme } = useStore();
+
+  return (
+    <nav className="bg-white dark:bg-gray-800 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
+          <div className="flex items-center">
+            <Workflow className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 dark:text-blue-400" />
+            <span className="ml-2 text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+              WID
+            </span>
+          </div>
+          <button
+            onClick={toggleTheme}
+            className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? (
+              <Moon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700 dark:text-gray-300" />
+            ) : (
+              <Sun className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700 dark:text-gray-300" />
+            )}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
