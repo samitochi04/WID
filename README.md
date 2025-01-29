@@ -75,3 +75,25 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 ## Contributeurs
 - Winner KODJO.
 - Samuel FOTSO.
+
+# Demonstration 
+
+1. Connexion
+![widlogin](https://github.com/user-attachments/assets/ce58b666-6082-4f40-824b-1c45e2eef70e)
+
+2. Inscription
+
+![widsignup](https://github.com/user-attachments/assets/5bd61180-8ff3-4283-a590-dad8b4561df1)
+
+3. Light Mode
+
+![lightmode](https://github.com/user-attachments/assets/55fdfdf1-4293-4d96-ad8d-4e45f4a6d646)
+
+4. Interface
+![kg,jdwid](https://github.com/user-attachments/assets/f2d0be3e-f316-497d-a3f4-a0ef61816109)
+
+
+
+
+
+   
