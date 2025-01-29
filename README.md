@@ -90,7 +90,54 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 ![lightmode](https://github.com/user-attachments/assets/55fdfdf1-4293-4d96-ad8d-4e45f4a6d646)
 
 4. Interface
+
 ![kg,jdwid](https://github.com/user-attachments/assets/f2d0be3e-f316-497d-a3f4-a0ef61816109)
+
+
+# Présentation du Fonctionnement de l'Application
+
+## Vue d'ensemble
+L'application WID est une solution full-stack utilisant **React** pour le frontend et **TypeScript** pour le backend. Elle permet aux utilisateurs de s'inscrire, de se connecter et d'interagir avec des données stockées dans une base MySQL. Elle est conçue avec une architecture modulaire et suit les meilleures pratiques du développement web moderne.
+
+---
+
+## Fonctionnement Global
+
+### 1. **Backend (TypeScript & MySQL)**
+Le backend est responsable de la gestion des utilisateurs, de l'authentification et de la communication avec la base de données.
+
+- **`server.js`** : Point d'entrée du serveur Express, il initialise les middlewares et démarre l'application.
+- **`routes/`** : Contient les différentes routes de l'API (authentification, gestion des utilisateurs, etc.).
+- **`controllers/`** : Contient la logique métier de chaque route.
+- **`models/`** : Définit les structures des données et la gestion des interactions avec MySQL via `mysql2`.
+- **`middleware/`** : Contient des fonctions pour sécuriser les endpoints (ex: vérification des tokens JWT).
+- **`.env`** : Fichier contenant les variables d'environnement comme les clés de connexion à la base de données.
+
+### 2. **Base de données (MySQL/PlanetScale)**
+- Stocke les utilisateurs et les informations nécessaires au bon fonctionnement de l'application.
+- Gérée avec `mysql2`, elle assure la persistance des données.
+
+### 3. **Frontend (React & Tailwind CSS)**
+Le frontend est développé en React avec un design basé sur Tailwind CSS pour assurer une interface utilisateur fluide et responsive.
+
+- **`index.html`** : Fichier principal qui charge l'application React.
+- **`src/App.js`** : Point d'entrée principal du frontend React.
+- **`src/components/`** : Contient les composants réutilisables.
+- **`src/pages/`** : Contient les différentes pages de l'application.
+- **`src/store.js`** : Utilise `zustand` pour la gestion de l'état global.
+- **`tailwind.config.js`** : Configuration de Tailwind CSS pour le style de l'application.
+
+### 4. **Interaction Backend-Frontend**
+L'application communique via une API REST.
+- **Authentification JWT** : Lorsqu'un utilisateur se connecte, un token est généré et stocké pour valider les requêtes futures.
+- **Appels API via `fetch`** : Le frontend envoie des requêtes HTTP (GET, POST, etc.) au backend pour récupérer ou modifier des données.
+- **Mise à jour en temps réel** : Grâce à `zustand`, l'état est mis à jour dynamiquement sur l'interface utilisateur.
+
+---
+
+## Conclusion
+Cette application suit une architecture claire et modulaire, permettant une extensibilité et une maintenance aisée. Elle utilise des technologies modernes pour offrir une expérience utilisateur fluide et une gestion efficace des données.
+
 
 
 
