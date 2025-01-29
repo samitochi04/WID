@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signUp } from "../../lib/auth"; // Updated import (no createToken needed)
+import { signUp } from "../../lib/auth"; 
 import { useStore } from "../../store/useStore";
 
 export const SignupForm: React.FC = () => {
@@ -22,9 +22,9 @@ export const SignupForm: React.FC = () => {
     setLoading(true);
 
     try {
-      const { user, token } = await signUp(email, password); // Call updated signUp function
-      setAuth(user, token); // Save auth state
-      localStorage.setItem("authToken", token); // Store token for future authentication
+      const { user, token } = await signUp(email, password); 
+      setAuth(user, token); 
+      localStorage.setItem("authToken", token); 
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
