@@ -3,11 +3,11 @@ export interface User {
   email: string;
 }
 
-const API_BASE_URL = "http://localhost:3000"; // Backend URL
+const API_BASE_URL = "http://localhost:3000";
 
 // Sign up a new user
 export async function signUp(email: string, password: string): Promise<{ user: User; token: string }> {
-  console.log("Sending signup request:", { email, password }); // Debugging log
+  console.log("Sending signup request:", { email, password });
 
   const response = await fetch(`${API_BASE_URL}/signup`, {
     method: "POST",
