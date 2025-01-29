@@ -34,7 +34,7 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
 1. **Cloner le projet**
    ```sh
-   git clone (https://github.com/samitochi04/WID.git)
+   git clone https://github.com/samitochi04/WID.git
    cd project
    ```
 2. **Installer les dépendances**
