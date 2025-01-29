@@ -8,19 +8,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = new TextEncoder().encode('your_jwt_secret'); // Replace with your actual secret
+const JWT_SECRET = new TextEncoder().encode('your_jwt_secret'); 
 
-// Create a MySQL connection pool
 const db = mysql.createPool({
-  host: '127.0.0.1', // Replace with your DB host
-  user: 'root', // Replace with your DB username
-  password: 'ljbkndthbruks@445', // Replace with your DB password
-  database: 'todoapp', // Replace with your DB name
+  host: '127.0.0.1', t
+  user: '', 
+  password: '',
+  database: 'todoapp', 
 });
 
-// Route for signing up users
 app.post('/signup', async (req, res) => {
-    console.log("Received signup request:", req.body); // Log request body
+    console.log("Received signup request:", req.body);
   
     const { email, password } = req.body;
   
@@ -57,12 +55,10 @@ app.post('/signup', async (req, res) => {
 });
   
 
-// Route for signing in users
 app.post('/signin', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Fetch the user from the database
     const [rows] = await db.execute('SELECT * FROM users WHERE email = ?', [email]);
 
     if (rows.length === 0) {
@@ -101,7 +97,6 @@ app.post('/verify-token', async (req, res) => {
   }
 });
 
-// Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
